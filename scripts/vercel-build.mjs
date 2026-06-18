@@ -24,13 +24,13 @@ await build({
   outfile: `${FUNC}/index.js`,
   platform: 'node',
   target: 'node22',
-  format: 'esm',
+  format: 'cjs',
   // Keep ALL Node.js built-ins external — both bare ('util') and 'node:' prefixed forms
   external: [...builtinModules, ...builtinModules.map((m) => `node:${m}`)],
 })
 
-// 5. Tell Node.js the function directory is ESM
-writeFileSync(`${FUNC}/package.json`, JSON.stringify({ type: 'module' }))
+// 5. CJS is Node's default — no package.json needed, but write one to be explicit
+writeFileSync(`${FUNC}/package.json`, JSON.stringify({ type: 'commonjs' }))
 
 // 6. Function config
 writeFileSync(
