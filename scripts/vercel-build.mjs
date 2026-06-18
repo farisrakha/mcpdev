@@ -45,7 +45,10 @@ export default async function handler(req, res) {
 `,
 )
 
-// 6. Function config
+// 6. Mark function directory as ESM so Node.js loads server.js correctly
+writeFileSync(`${FUNC}/package.json`, JSON.stringify({ type: 'module' }))
+
+// 7. Function config
 writeFileSync(
   `${FUNC}/.vc-config.json`,
   JSON.stringify({ runtime: 'nodejs22.x', handler: 'index.js', launcherType: 'Nodejs' }),
