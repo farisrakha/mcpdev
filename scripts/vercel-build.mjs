@@ -1,5 +1,6 @@
 import { execSync } from 'child_process'
 import { cpSync, mkdirSync, writeFileSync } from 'fs'
+import { builtinModules } from 'module'
 import { build } from 'esbuild'
 
 // 1. Build the app (Vite SSR + client)
@@ -24,8 +25,8 @@ await build({
   platform: 'node',
   target: 'node22',
   format: 'esm',
-  // Keep Node.js built-ins external (available in every Vercel runtime)
-  external: ['node:*'],
+  // Keep ALL Node.js built-ins external — both bare ('util') and 'node:' prefixed forms
+  external: [...builtinModules, ...builtinModules.map((m) => `node:${m}`)],
 })
 
 // 5. Tell Node.js the function directory is ESM
