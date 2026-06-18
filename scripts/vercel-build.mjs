@@ -28,7 +28,10 @@ await build({
   external: ['node:*'],
 })
 
-// 5. Function config
+// 5. Tell Node.js the function directory is ESM
+writeFileSync(`${FUNC}/package.json`, JSON.stringify({ type: 'module' }))
+
+// 6. Function config
 writeFileSync(
   `${FUNC}/.vc-config.json`,
   JSON.stringify({ runtime: 'nodejs22.x', handler: 'index.js', launcherType: 'Nodejs' }),
