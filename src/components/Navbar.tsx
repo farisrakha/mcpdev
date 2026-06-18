@@ -6,17 +6,17 @@ export function Navbar() {
         <a href="/" className="flex items-center gap-2 shrink-0">
           <div className="relative w-[129px] h-[43px]">
             <img
-              src="/assets/logo-img-group.png"
+              src="/assets/logo-img-group.svg"
               alt="Moderne logo mark"
               className="absolute left-0 top-0 h-full"
             />
             <img
-              src="/assets/logo-path.png"
+              src="/assets/logo-path.svg"
               alt=""
               className="absolute left-[55px] top-[33%] h-[33%]"
             />
             <img
-              src="/assets/logo-text.png"
+              src="/assets/logo-text.svg"
               alt="Moderne"
               className="absolute left-[12px] top-[19%] h-[65%]"
             />

@@ -22,14 +22,14 @@ export function Footer() {
           <div className="flex flex-col gap-14">
             <div className="relative w-[43px] h-[43px]">
               <img
-                src="/assets/footer-logo-group.png"
+                src="/assets/footer-logo-group.svg"
                 alt=""
                 className="absolute inset-0 w-full h-full"
               />
               <img
-                src="/assets/footer-logo-text.png"
+                src="/assets/footer-logo-text.svg"
                 alt="Moderne"
-                className="absolute inset-[19%_30%_15%_28%]"
+                className="absolute left-[28%] top-[19%] h-[65%] w-auto"
               />
             </div>
             <p className="font-helvetica text-[#7c80ad] text-[15px] leading-[16px]">Moderne © 2020</p>
