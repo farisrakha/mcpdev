@@ -3,24 +3,24 @@ export function Navbar() {
     <nav className="bg-[#171c5d] w-full sticky top-0 z-50">
       <div className="max-w-[1200px] mx-auto px-5 flex items-center justify-between py-6 gap-8">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2 shrink-0">
-          <div className="relative w-[129px] h-[43px]">
+        <a href="/" className="flex items-center gap-3 shrink-0">
+          <div className="relative w-[43px] h-[43px] shrink-0">
             <img
               src="/assets/logo-img-group.svg"
-              alt="Moderne logo mark"
-              className="absolute left-0 top-0 h-full"
-            />
-            <img
-              src="/assets/logo-path.svg"
               alt=""
-              className="absolute left-[55px] top-[33%] h-[33%]"
+              className="absolute inset-0 w-full h-full"
             />
             <img
               src="/assets/logo-text.svg"
-              alt="Moderne"
-              className="absolute left-[12px] top-[19%] h-[65%]"
+              alt=""
+              className="absolute left-[20%] top-[17%] h-[65%] w-auto"
             />
           </div>
+          <img
+            src="/assets/logo-path.svg"
+            alt="Moderne"
+            className="h-[14px] w-auto"
+          />
         </a>
 
         {/* Nav links */}
