@@ -4,16 +4,11 @@ export function Navbar() {
       <div className="max-w-[1200px] mx-auto px-5 flex items-center justify-between py-6 gap-8">
         {/* Logo */}
         <a href="/" className="flex items-center gap-3 shrink-0">
-          <div className="relative w-[43px] h-[43px] shrink-0">
-            <img
-              src="/assets/logo-img-group.svg"
-              alt=""
-              className="absolute inset-0 w-full h-full"
-            />
+          <div className="relative w-[43px] h-[43px] shrink-0 rounded-full bg-white">
             <img
               src="/assets/logo-text.svg"
               alt=""
-              className="absolute left-[20%] top-[17%] h-[65%] w-auto"
+              className="absolute left-[12px] top-[19%] h-[65%] w-auto"
             />
           </div>
           <img
